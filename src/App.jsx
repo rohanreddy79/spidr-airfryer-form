@@ -37,7 +37,7 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-900 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
-        {/* Header */}
+
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-500 rounded-full mb-4">
             <svg className="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
@@ -48,9 +48,9 @@ function App() {
           <p className="text-gray-400">Join the revolution in cooking technology</p>
         </div>
 
-        {/* Form */}
+
         <form onSubmit={handleSubmit} className="space-y-6 bg-gray-800 p-8 rounded-lg shadow-xl">
-          {/* First Name */}
+ 
           <div>
             <label htmlFor="firstName" className="block text-sm font-medium text-white mb-2">
               First Name
@@ -67,7 +67,7 @@ function App() {
             />
           </div>
 
-          {/* Last Name */}
+
           <div>
             <label htmlFor="lastName" className="block text-sm font-medium text-white mb-2">
               Last Name
@@ -84,7 +84,7 @@ function App() {
             />
           </div>
 
-          {/* Phone Number */}
+
           <div>
             <label htmlFor="phoneNumber" className="block text-sm font-medium text-white mb-2">
               Phone Number
@@ -101,7 +101,7 @@ function App() {
             />
           </div>
 
-          {/* Email Address */}
+
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
               Email Address
@@ -118,7 +118,7 @@ function App() {
             />
           </div>
 
-          {/* Cost Guess */}
+
           <div>
             <label htmlFor="costGuess" className="block text-sm font-medium text-white mb-2">
               Guess the Air Fryer's Cost
@@ -138,7 +138,7 @@ function App() {
             </div>
           </div>
 
-          {/* Spidr PIN */}
+
           <div>
             <label htmlFor="spidrPin" className="block text-sm font-medium text-white mb-2">
               Very, Very Secret 16-Digit Spidr PIN
@@ -150,14 +150,14 @@ function App() {
               value={formData.spidrPin}
               onChange={handleInputChange}
               required
-              maxLength="19" // 16 digits + 3 dashes
+              maxLength="19"
               className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all duration-200 font-mono tracking-wider"
               placeholder="1234-5678-9012-3456"
             />
             <p className="text-xs text-gray-400 mt-1">Format: ####-####-####-####</p>
           </div>
 
-          {/* Submit Button */}
+
           <Button 
             type="submit"
             className="w-full bg-teal-500 hover:bg-teal-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 focus:ring-offset-gray-800"
@@ -165,8 +165,6 @@ function App() {
             Submit Interest Form
           </Button>
         </form>
-
-        {/* Footer */}
         <div className="text-center mt-8">
           <p className="text-gray-500 text-sm">
             Powered by <span className="text-teal-500 font-semibold">Spidr Design</span>
