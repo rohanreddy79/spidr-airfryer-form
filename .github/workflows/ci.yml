@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      # react-day-picker 8.x declares a date-fns ^2/^3 peer while date-fns 4 is pinned,
+      # so npm needs --legacy-peer-deps (the lockfile itself is in sync).
+      - run: npm ci --legacy-peer-deps
+      - run: npm run build
